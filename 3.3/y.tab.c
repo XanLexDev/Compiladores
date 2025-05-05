@@ -1343,14 +1343,10 @@ void yyerror(const char *s) {
 }
 
 int main() {
-    printf("Analizador de expresiones combinadas (v2.0)\n");
-    printf("Prueba con:\n");
-    printf("  (4 + 5) * (2 AND 1)\n");
-    printf("  (4 + 5) * 2\n\n");
+    printf("Introduce expresiones (Ctrl+D para salir):\n");
+
+
+    yyparse();
     
-    while(1) {
-        printf("> ");
-        yyparse();
-    }
     return 0;
 }
